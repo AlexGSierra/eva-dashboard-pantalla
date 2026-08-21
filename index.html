@@ -249,7 +249,7 @@
     <header>
         <div>
             <h1>EVA | Dashboard de Cambios de Molde</h1>
-            <p>Vista de proyección - información del turno actual</p>
+            <p>Vista de Proyección - Información Actual</p>
 
             <div id="estadoConexion" class="estado-conexion">
                 Cargando información EVA...
@@ -339,7 +339,7 @@
     </main>
 
     <footer>
-        EVA | PROCESOS 4.0 - ConMet
+        EVA | PROCESOS 4.0 - ConMet de México
     </footer>
 
     <script>
@@ -362,7 +362,7 @@
                 tabla.innerHTML = `
                     <tr>
                         <td colspan="2" class="sin-datos">
-                            No hay cambios pendientes para este periodo.
+                            No hay cambios de moldes pendientes.
                         </td>
                     </tr>
                 `;
@@ -386,7 +386,7 @@
                 tabla.innerHTML = `
                     <tr>
                         <td colspan="3" class="sin-datos">
-                            No hay cambios pendientes de arranque.
+                            No hay arranques pendientes.
                         </td>
                     </tr>
                 `;
@@ -449,14 +449,14 @@
                 llenarTablaProceso(datos.tabla_proceso);
 
                 estadoConexion.textContent =
-                    "Información EVA actualizada correctamente.";
+                    "EVA actualizara la información cada 60 seg.";
 
             } catch (error) {
                 console.error(error);
 
                 estadoConexion.innerHTML = `
                     <span class="error">
-                        Sin información EVA:
+                    Se esta presentando una perdida de comunicación, notificar a Alex Sierra:
                         ${escaparHtml(error.message)}
                     </span>
                 `;
