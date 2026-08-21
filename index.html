@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>EVA | Dashboard de Cambios de Molde</title>
+
+    <style>
+        :root {
+            --vino: #8b1e3f;
+            --verde: #15803d;
+            --amarillo: #d97706;
+            --rojo: #b91c1c;
+            --azul: #2563eb;
+            --gris: #6b7280;
+            --fondo: #f3f4f6;
+            --texto: #1f2937;
+            --blanco: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--texto);
+            background: var(--fondo);
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            padding: 24px 42px;
+            color: white;
+            background: var(--vino);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: clamp(25px, 3vw, 42px);
+        }
+
+        header p {
+            margin: 8px 0 0;
+            font-size: clamp(14px, 1.5vw, 20px);
+        }
+
+        .logo-header {
+            display: block;
+            max-width: 280px;
+            height: 90px;
+            object-fit: contain;
+            object-position: right center;
+        }
+
+        .estado-conexion {
+            margin-top: 8px;
+            font-size: 14px;
+            opacity: .95;
+        }
+
+        .contenedor {
+            max-width: 1850px;
+            margin: auto;
+            padding: 28px;
+        }
+
+        .informacion-turno {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 22px;
+            padding: 16px 20px;
+            border-radius: 12px;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, .10);
+        }
+
+        .informacion-turno strong {
+            color: var(--vino);
+            font-size: clamp(20px, 2vw, 30px);
+        }
+
+        .actualizado {
+            color: var(--gris);
+            font-size: clamp(14px, 1.3vw, 18px);
+        }
+
+        .tarjetas {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(180px, 1fr));
+            gap: 18px;
+            margin-bottom: 22px;
+        }
+
+        .tarjeta {
+            min-height: 160px;
+            padding: 22px;
+            border-top: 7px solid var(--azul);
+            border-radius: 12px;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, .12);
+        }
+
+        .tarjeta.realizado {
+            border-top-color: var(--verde);
+        }
+
+        .tarjeta.pendiente {
+            border-top-color: var(--rojo);
+        }
+
+        .tarjeta.arranque {
+            border-top-color: var(--amarillo);
+        }
+
+        .tarjeta h2 {
+            margin: 0;
+            color: #4b5563;
+            font-size: clamp(16px, 1.4vw, 22px);
+        }
+
+        .numero {
+            margin-top: 20px;
+            font-size: clamp(44px, 5vw, 72px);
+            font-weight: bold;
+        }
+
+        .detalle-columnas {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .seccion {
+            min-width: 0;
+            padding: 22px;
+            border-radius: 12px;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, .12);
+        }
+
+        .seccion h2 {
+            margin-top: 0;
+            color: var(--vino);
+            font-size: clamp(22px, 2vw, 32px);
+        }
+
+        .tabla-contenedor {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: clamp(16px, 1.5vw, 22px);
+        }
+
+        th {
+            color: #111827;
+            background: #eaf0f6;
+        }
+
+        th,
+        td {
+            padding: 14px;
+            text-align: left;
+            border-bottom: 1px solid #d1d5db;
+        }
+
+        .sin-datos {
+            color: var(--gris);
+            font-style: italic;
+        }
+
+        .error {
+            display: inline-block;
+            padding: 10px 14px;
+            border-radius: 8px;
+            color: #991b1b;
+            background: #fee2e2;
+            font-weight: bold;
+        }
+
+        footer {
+            padding: 18px 30px;
+            color: var(--gris);
+            font-size: 13px;
+        }
+
+        @media (max-width: 1100px) {
+            .tarjetas {
+                grid-template-columns: repeat(3, minmax(180px, 1fr));
+            }
+        }
+
+        @media (max-width: 800px) {
+            header {
+                padding: 20px;
+            }
+
+            .contenedor {
+                padding: 16px;
+            }
+
+            .tarjetas {
+                grid-template-columns: repeat(2, minmax(150px, 1fr));
+            }
+
+            .detalle-columnas {
+                grid-template-columns: 1fr;
+            }
+
+            .informacion-turno {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 500px) {
+            header {
+                padding: 16px;
+            }
+
+            .logo-header {
+                max-width: 140px;
+                height: 50px;
+            }
+
+            .tarjetas {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1>EVA | Dashboard de Cambios de Molde</h1>
+            <p>Vista de proyección - información del turno actual</p>
+
+            <div id="estadoConexion" class="estado-conexion">
+                Cargando información EVA...
+            </div>
+        </div>
+
+        <!-- Opcional: agrega logo_conmet.jpg al repositorio -->
+        <img
+            class="logo-header"
+            src="logo_conmet.jpg"
+            alt="Logo ConMet"
+        >
+    </header>
+
+    <main class="contenedor">
+        <section class="informacion-turno">
+            <strong id="periodoActual">
+                Cargando turno actual...
+            </strong>
+
+            <span id="actualizado" class="actualizado"></span>
+        </section>
+
+        <section class="tarjetas">
+            <article class="tarjeta">
+                <h2>Cambios de molde programados</h2>
+                <div id="programados" class="numero">0</div>
+            </article>
+
+            <article class="tarjeta realizado">
+                <h2>Cambios de molde realizados</h2>
+                <div id="realizados" class="numero">0</div>
+            </article>
+
+            <article class="tarjeta pendiente">
+                <h2>Cambios de molde pendientes</h2>
+                <div id="pendientes" class="numero">0</div>
+            </article>
+
+            <article class="tarjeta realizado">
+                <h2>Arranques realizados</h2>
+                <div id="arranquesRealizados" class="numero">0</div>
+            </article>
+
+            <article class="tarjeta arranque">
+                <h2>Arranques en proceso</h2>
+                <div id="arranquesProceso" class="numero">0</div>
+            </article>
+        </section>
+
+        <section class="detalle-columnas">
+            <article class="seccion">
+                <h2>Cambios de molde pendientes</h2>
+
+                <div class="tabla-contenedor">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Máquina</th>
+                                <th>Molde</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="tablaPendientes"></tbody>
+                    </table>
+                </div>
+            </article>
+
+            <article class="seccion">
+                <h2>Cambios en proceso</h2>
+
+                <div class="tabla-contenedor">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Máquina</th>
+                                <th>Molde</th>
+                                <th>Estatus</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="tablaProceso"></tbody>
+                    </table>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        EVA | PROCESOS 4.0 - ConMet
+    </footer>
+
+    <script>
+        const estadoConexion = document.getElementById(
+            "estadoConexion"
+        );
+
+        function escaparHtml(texto) {
+            const div = document.createElement("div");
+            div.textContent = texto ?? "";
+            return div.innerHTML;
+        }
+
+        function llenarTablaPendientes(datos) {
+            const tabla = document.getElementById(
+                "tablaPendientes"
+            );
+
+            if (!datos || !datos.length) {
+                tabla.innerHTML = `
+                    <tr>
+                        <td colspan="2" class="sin-datos">
+                            No hay cambios pendientes para este periodo.
+                        </td>
+                    </tr>
+                `;
+                return;
+            }
+
+            tabla.innerHTML = datos.map(item => `
+                <tr>
+                    <td>${escaparHtml(item.maquina)}</td>
+                    <td>${escaparHtml(item.molde)}</td>
+                </tr>
+            `).join("");
+        }
+
+        function llenarTablaProceso(datos) {
+            const tabla = document.getElementById(
+                "tablaProceso"
+            );
+
+            if (!datos || !datos.length) {
+                tabla.innerHTML = `
+                    <tr>
+                        <td colspan="3" class="sin-datos">
+                            No hay cambios pendientes de arranque.
+                        </td>
+                    </tr>
+                `;
+                return;
+            }
+
+            tabla.innerHTML = datos.map(item => `
+                <tr>
+                    <td>${escaparHtml(item.maquina)}</td>
+                    <td>${escaparHtml(item.molde)}</td>
+                    <td>${escaparHtml(item.estatus)}</td>
+                </tr>
+            `).join("");
+        }
+
+        async function actualizarPantalla() {
+            try {
+                /*
+                    ?v=timestamp evita que GitHub Pages o el navegador
+                    muestren una versión vieja guardada en caché.
+                */
+                const respuesta = await fetch(
+                    `data/resumen_pantalla.json?v=${Date.now()}`
+                );
+
+                if (!respuesta.ok) {
+                    throw new Error(
+                        "No se encontró información publicada todavía."
+                    );
+                }
+
+                const datos = await respuesta.json();
+
+                document.getElementById("periodoActual").textContent =
+                    `Fecha: ${datos.fecha} | Turno: ${datos.turno}`;
+
+                document.getElementById("actualizado").textContent =
+                    `Última actualización: ${datos.actualizado}`;
+
+                document.getElementById("programados").textContent =
+                    datos.programados ?? 0;
+
+                document.getElementById("realizados").textContent =
+                    datos.realizados ?? 0;
+
+                document.getElementById("pendientes").textContent =
+                    datos.pendientes ?? 0;
+
+                document.getElementById(
+                    "arranquesRealizados"
+                ).textContent =
+                    datos.arranques_realizados ?? 0;
+
+                document.getElementById(
+                    "arranquesProceso"
+                ).textContent =
+                    datos.arranques_en_proceso ?? 0;
+
+                llenarTablaPendientes(datos.tabla_pendientes);
+                llenarTablaProceso(datos.tabla_proceso);
+
+                estadoConexion.textContent =
+                    "Información EVA actualizada correctamente.";
+
+            } catch (error) {
+                console.error(error);
+
+                estadoConexion.innerHTML = `
+                    <span class="error">
+                        Sin información EVA:
+                        ${escaparHtml(error.message)}
+                    </span>
+                `;
+            }
+        }
+
+        // La pantalla revisa datos actualizados cada minuto.
+        setInterval(actualizarPantalla, 60000);
+
+        actualizarPantalla();
+    </script>
+</body>
+</html>
