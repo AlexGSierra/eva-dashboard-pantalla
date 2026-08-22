@@ -2,12 +2,17 @@
     "fecha": "22-Aug-2026",
     "fecha_iso": "2026-08-22",
     "turno": "Día",
-    "programados": 0,
+    "programados": 1,
     "realizados": 0,
-    "pendientes": 0,
+    "pendientes": 1,
     "arranques_realizados": 0,
     "arranques_en_proceso": 0,
-    "tabla_pendientes": [],
+    "tabla_pendientes": [
+        {
+            "maquina": "IMM 2",
+            "molde": "454681"
+        }
+    ],
     "tabla_proceso": [],
-    "actualizado": "2026-08-22 07:00:01"
+    "actualizado": "2026-08-22 14:14:56"
 }
