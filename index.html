@@ -164,7 +164,7 @@
         table {
             width: 100%;
             border-collapse: collapse;
-            font-size: clamp(16px, 1.5vw, 22px);
+            font-size: clamp(14px, 1.35vw, 21px);
         }
 
         th {
@@ -177,6 +177,22 @@
             padding: 14px;
             text-align: left;
             border-bottom: 1px solid #d1d5db;
+        }
+
+        .fila-atrasada td {
+            color: var(--rojo);
+            background: #fef2f2;
+            font-weight: bold;
+        }
+
+        .fuera-programacion {
+            color: var(--rojo);
+            font-weight: bold;
+        }
+
+        .iniciar-montaje {
+            color: var(--amarillo);
+            font-weight: bold;
         }
 
         .sin-datos {
@@ -249,14 +265,14 @@
     <header>
         <div>
             <h1>EVA | Dashboard de Cambios de Molde</h1>
-            <p>Vista de Proyección - Información Actual</p>
+            <p>Vista de proyección - Información actual</p>
 
             <div id="estadoConexion" class="estado-conexion">
                 EVA cargando información...
             </div>
         </div>
 
-        <!-- Opcional: agrega logo_conmet.jpg al repositorio -->
+        <!-- El archivo debe existir en la raíz del repositorio. -->
         <img
             class="logo-header"
             src="logo_canmet.png"
@@ -295,7 +311,7 @@
             </article>
 
             <article class="tarjeta arranque">
-                <h2>Arranques pendientes</h2>
+                <h2>Arranques en proceso</h2>
                 <div id="arranquesProceso" class="numero">0</div>
             </article>
         </section>
@@ -308,8 +324,11 @@
                     <table>
                         <thead>
                             <tr>
+                                <th>Programación</th>
                                 <th>Máquina</th>
                                 <th>Molde</th>
+                                <th>Número de parte</th>
+                                <th>Fuera de programación</th>
                             </tr>
                         </thead>
 
@@ -319,7 +338,7 @@
             </article>
 
             <article class="seccion">
-                <h2>Arranques pendientes</h2>
+                <h2>Cambios en proceso</h2>
 
                 <div class="tabla-contenedor">
                     <table>
@@ -327,6 +346,7 @@
                             <tr>
                                 <th>Máquina</th>
                                 <th>Molde</th>
+                                <th>Número de parte</th>
                                 <th>Estatus</th>
                             </tr>
                         </thead>
@@ -361,20 +381,42 @@
             if (!datos || !datos.length) {
                 tabla.innerHTML = `
                     <tr>
-                        <td colspan="2" class="sin-datos">
-                            No hay cambios de moldes pendientes.
+                        <td colspan="5" class="sin-datos">
+                            No hay cambios de molde pendientes.
                         </td>
                     </tr>
                 `;
                 return;
             }
 
-            tabla.innerHTML = datos.map(item => `
-                <tr>
-                    <td>${escaparHtml(item.maquina)}</td>
-                    <td>${escaparHtml(item.molde)}</td>
-                </tr>
-            `).join("");
+            tabla.innerHTML = datos.map(item => {
+                let claseFila = "";
+                let claseEstatus = "";
+
+                if (item.atrasado) {
+                    claseFila = "fila-atrasada";
+                    claseEstatus = "fuera-programacion";
+
+                } else if (
+                    item.fuera_programacion === "Iniciar montaje"
+                ) {
+                    claseEstatus = "iniciar-montaje";
+                }
+
+                return `
+                    <tr class="${claseFila}">
+                        <td>${escaparHtml(item.programacion)}</td>
+                        <td>${escaparHtml(item.maquina)}</td>
+                        <td>${escaparHtml(item.molde)}</td>
+                        <td>${escaparHtml(item.no_parte)}</td>
+                        <td class="${claseEstatus}">
+                            ${escaparHtml(
+                                item.fuera_programacion
+                            )}
+                        </td>
+                    </tr>
+                `;
+            }).join("");
         }
 
         function llenarTablaProceso(datos) {
@@ -385,8 +427,8 @@
             if (!datos || !datos.length) {
                 tabla.innerHTML = `
                     <tr>
-                        <td colspan="3" class="sin-datos">
-                            No hay arranques pendientes.
+                        <td colspan="4" class="sin-datos">
+                            No hay cambios pendientes de arranque.
                         </td>
                     </tr>
                 `;
@@ -397,6 +439,7 @@
                 <tr>
                     <td>${escaparHtml(item.maquina)}</td>
                     <td>${escaparHtml(item.molde)}</td>
+                    <td>${escaparHtml(item.no_parte)}</td>
                     <td>${escaparHtml(item.estatus)}</td>
                 </tr>
             `).join("");
@@ -405,8 +448,8 @@
         async function actualizarPantalla() {
             try {
                 /*
-                    ?v=timestamp evita que GitHub Pages o el navegador
-                    muestren una versión vieja guardada en caché.
+                    Evita utilizar una versión guardada
+                    en caché del archivo JSON.
                 */
                 const respuesta = await fetch(
                     `data/resumen_pantalla.json?v=${Date.now()}`
@@ -420,19 +463,29 @@
 
                 const datos = await respuesta.json();
 
-                document.getElementById("periodoActual").textContent =
+                document.getElementById(
+                    "periodoActual"
+                ).textContent =
                     `Fecha: ${datos.fecha} | Turno: ${datos.turno}`;
 
-                document.getElementById("actualizado").textContent =
+                document.getElementById(
+                    "actualizado"
+                ).textContent =
                     `Última actualización: ${datos.actualizado}`;
 
-                document.getElementById("programados").textContent =
+                document.getElementById(
+                    "programados"
+                ).textContent =
                     datos.programados ?? 0;
 
-                document.getElementById("realizados").textContent =
+                document.getElementById(
+                    "realizados"
+                ).textContent =
                     datos.realizados ?? 0;
 
-                document.getElementById("pendientes").textContent =
+                document.getElementById(
+                    "pendientes"
+                ).textContent =
                     datos.pendientes ?? 0;
 
                 document.getElementById(
@@ -449,21 +502,22 @@
                 llenarTablaProceso(datos.tabla_proceso);
 
                 estadoConexion.textContent =
-                    "EVA actualizara la información cada 60 seg.";
+                    "EVA actualiza la información cada 60 segundos.";
 
             } catch (error) {
                 console.error(error);
 
                 estadoConexion.innerHTML = `
                     <span class="error">
-                    Se esta presentando una perdida de comunicación, notificar a Alex Sierra:
+                        Se presenta una pérdida de comunicación.
+                        Notificar a Alex Sierra:
                         ${escaparHtml(error.message)}
                     </span>
                 `;
             }
         }
 
-        // La pantalla revisa datos actualizados cada minuto.
+        // Actualiza la vista de proyección cada 60 segundos.
         setInterval(actualizarPantalla, 60000);
 
         actualizarPantalla();
