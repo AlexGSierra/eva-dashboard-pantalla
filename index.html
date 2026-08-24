@@ -8,7 +8,7 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>EVA | Dashboard de Cambios de Molde</title>
+    <title>EVA | Mold Change Dashboard</title>
 
     <style>
         :root {
@@ -264,11 +264,11 @@
 <body>
     <header>
         <div>
-            <h1>EVA | Dashboard de Cambios de Molde</h1>
-            <p>Vista de proyección - Información actual</p>
+            <h1>EVA | Mold Change Dashboard</h1>
+            <p>Projection View – Current Information</p>
 
             <div id="estadoConexion" class="estado-conexion">
-                EVA cargando información...
+                EVA loading data...
             </div>
         </div>
 
@@ -283,7 +283,7 @@
     <main class="contenedor">
         <section class="informacion-turno">
             <strong id="periodoActual">
-                Cargando turno actual...
+                Loading current shift...
             </strong>
 
             <span id="actualizado" class="actualizado"></span>
@@ -291,44 +291,44 @@
 
         <section class="tarjetas">
             <article class="tarjeta">
-                <h2>Cambios de molde programados</h2>
+                <h2>Scheduled Mold Changes</h2>
                 <div id="programados" class="numero">0</div>
             </article>
 
             <article class="tarjeta realizado">
-                <h2>Cambios de molde realizados</h2>
+                <h2>Completed Mold Changes</h2>
                 <div id="realizados" class="numero">0</div>
             </article>
 
             <article class="tarjeta pendiente">
-                <h2>Cambios de molde pendientes</h2>
+                <h2>Pending Mold Changes</h2>
                 <div id="pendientes" class="numero">0</div>
             </article>
 
             <article class="tarjeta realizado">
-                <h2>Arranques realizados</h2>
+                <h2>Completed Startups</h2>
                 <div id="arranquesRealizados" class="numero">0</div>
             </article>
 
             <article class="tarjeta arranque">
-                <h2>Arranques en proceso</h2>
+                <h2>Startups in Progress</h2>
                 <div id="arranquesProceso" class="numero">0</div>
             </article>
         </section>
 
         <section class="detalle-columnas">
             <article class="seccion">
-                <h2>Cambios de molde pendientes</h2>
+                <h2>Scheduled Mold Changeovers</h2>
 
                 <div class="tabla-contenedor">
                     <table>
                         <thead>
                             <tr>
-                                <th>Programación</th>
-                                <th>Máquina</th>
-                                <th>Molde</th>
-                                <th>Número de parte</th>
-                                <th>Fuera de programación</th>
+                                <th>Startup</th>
+                                <th>Machine</th>
+                                <th>Tool</th>
+                                <th>Part Number</th>
+                                <th>Downtime</th>
                             </tr>
                         </thead>
 
@@ -338,16 +338,16 @@
             </article>
 
             <article class="seccion">
-                <h2>Cambios en proceso</h2>
+                <h2>Mold Startup</h2>
 
                 <div class="tabla-contenedor">
                     <table>
                         <thead>
                             <tr>
-                                <th>Máquina</th>
-                                <th>Molde</th>
-                                <th>Número de parte</th>
-                                <th>Estatus</th>
+                                <th>Machine</th>
+                                <th>Tool</th>
+                                <th>Part Number</th>
+                                <th>Status</th>
                             </tr>
                         </thead>
 
@@ -359,7 +359,8 @@
     </main>
 
     <footer>
-        EVA | PROCESOS 4.0 - ConMet de México
+        EVA | PROCESS 4.0 - ConMet de México
+        By Alex Sierra
     </footer>
 
     <script>
@@ -382,7 +383,7 @@
                 tabla.innerHTML = `
                     <tr>
                         <td colspan="5" class="sin-datos">
-                            No hay cambios de molde pendientes.
+                            No Pending Changes for This Shift.
                         </td>
                     </tr>
                 `;
@@ -428,7 +429,7 @@
                 tabla.innerHTML = `
                     <tr>
                         <td colspan="4" class="sin-datos">
-                            No hay cambios pendientes de arranque.
+                            No Changes Pending at Startup.
                         </td>
                     </tr>
                 `;
@@ -457,7 +458,7 @@
 
                 if (!respuesta.ok) {
                     throw new Error(
-                        "No se encontró información publicada todavía."
+                        "No information has been published yet."
                     );
                 }
 
@@ -466,12 +467,12 @@
                 document.getElementById(
                     "periodoActual"
                 ).textContent =
-                    `Fecha: ${datos.fecha} | Turno: ${datos.turno}`;
+                    `Date: ${datos.fecha} | Shift: ${datos.turno}`;
 
                 document.getElementById(
-                    "actualizado"
+                    "Updated"
                 ).textContent =
-                    `Última actualización: ${datos.actualizado}`;
+                    `Last Updated: ${datos.actualizado}`;
 
                 document.getElementById(
                     "programados"
@@ -502,15 +503,15 @@
                 llenarTablaProceso(datos.tabla_proceso);
 
                 estadoConexion.textContent =
-                    "EVA actualiza la información cada 60 segundos.";
+                    "EVA updates the information every 60 seconds.";
 
             } catch (error) {
                 console.error(error);
 
                 estadoConexion.innerHTML = `
                     <span class="error">
-                        Se presenta una pérdida de comunicación.
-                        Notificar a Alex Sierra:
+                        Communication has been lost.
+                        Notify Alex Sierra:
                         ${escaparHtml(error.message)}
                     </span>
                 `;
