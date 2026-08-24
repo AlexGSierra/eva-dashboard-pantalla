@@ -37,7 +37,7 @@
             "maquina": "IMM 14",
             "molde": "452856",
             "no_parte": "10061101",
-            "fuera_programacion": "263 min",
+            "fuera_programacion": "265 min",
             "atrasado": true
         },
         {
@@ -53,10 +53,10 @@
             "maquina": "IMM 15",
             "molde": "815064",
             "no_parte": "10142067",
-            "fuera_programacion": "143 min",
+            "fuera_programacion": "145 min",
             "atrasado": true
         }
     ],
     "tabla_proceso": [],
-    "actualizado": "2026-08-24 11:23:55"
+    "actualizado": "2026-08-24 11:25:02"
 }
