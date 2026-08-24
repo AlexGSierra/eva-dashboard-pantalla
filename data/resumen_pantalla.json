@@ -2,9 +2,9 @@
     "fecha": "24-Aug-2026",
     "fecha_iso": "2026-08-24",
     "turno": "Día",
-    "programados": 6,
+    "programados": 8,
     "realizados": 0,
-    "pendientes": 6,
+    "pendientes": 8,
     "arranques_realizados": 0,
     "arranques_en_proceso": 0,
     "tabla_pendientes": [
@@ -37,7 +37,7 @@
             "maquina": "IMM 14",
             "molde": "452856",
             "no_parte": "10061101",
-            "fuera_programacion": "266 min",
+            "fuera_programacion": "267 min",
             "atrasado": true
         },
         {
@@ -53,10 +53,26 @@
             "maquina": "IMM 15",
             "molde": "815064",
             "no_parte": "10142067",
-            "fuera_programacion": "146 min",
+            "fuera_programacion": "147 min",
+            "atrasado": true
+        },
+        {
+            "programacion": "14:00:00",
+            "maquina": "IMM 19",
+            "molde": "428604",
+            "no_parte": "10028633",
+            "fuera_programacion": "",
+            "atrasado": false
+        },
+        {
+            "programacion": "07:00:00",
+            "maquina": "IMM 61",
+            "molde": "631544",
+            "no_parte": "10039264",
+            "fuera_programacion": "267 min",
             "atrasado": true
         }
     ],
     "tabla_proceso": [],
-    "actualizado": "2026-08-24 11:26:08"
+    "actualizado": "2026-08-24 11:27:14"
 }
