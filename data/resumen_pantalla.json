@@ -2,12 +2,21 @@
     "fecha": "24-Aug-2026",
     "fecha_iso": "2026-08-24",
     "turno": "Día",
-    "programados": 0,
+    "programados": 1,
     "realizados": 0,
-    "pendientes": 0,
+    "pendientes": 1,
     "arranques_realizados": 0,
     "arranques_en_proceso": 0,
-    "tabla_pendientes": [],
+    "tabla_pendientes": [
+        {
+            "programacion": "07:00:00",
+            "maquina": "IMM 1",
+            "molde": "426740",
+            "no_parte": "10127067",
+            "fuera_programacion": "251 min",
+            "atrasado": true
+        }
+    ],
     "tabla_proceso": [],
-    "actualizado": "2026-08-24 08:08:48"
+    "actualizado": "2026-08-24 11:11:46"
 }
