@@ -399,7 +399,7 @@
                     claseEstatus = "fuera-programacion";
 
                 } else if (
-                    item.fuera_programacion === "Iniciar montaje"
+                    item.fuera_programacion === "Start mold change"
                 ) {
                     claseEstatus = "iniciar-montaje";
                 }
@@ -519,7 +519,7 @@
         }
 
         // Actualiza la vista de proyección cada 60 segundos.
-        setInterval(actualizarPantalla, 60000);
+        setInterval(actualizarPantalla, 30000);
 
         actualizarPantalla();
     </script>
