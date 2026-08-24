@@ -2,9 +2,9 @@
     "fecha": "24-Aug-2026",
     "fecha_iso": "2026-08-24",
     "turno": "Día",
-    "programados": 12,
+    "programados": 13,
     "realizados": 0,
-    "pendientes": 12,
+    "pendientes": 13,
     "arranques_realizados": 0,
     "arranques_en_proceso": 0,
     "tabla_pendientes": [
@@ -37,7 +37,7 @@
             "maquina": "IMM 14",
             "molde": "452856",
             "no_parte": "10061101",
-            "fuera_programacion": "272 min",
+            "fuera_programacion": "273 min",
             "atrasado": true
         },
         {
@@ -53,7 +53,7 @@
             "maquina": "IMM 15",
             "molde": "815064",
             "no_parte": "10142067",
-            "fuera_programacion": "152 min",
+            "fuera_programacion": "153 min",
             "atrasado": true
         },
         {
@@ -69,7 +69,7 @@
             "maquina": "IMM 61",
             "molde": "631544",
             "no_parte": "10039264",
-            "fuera_programacion": "272 min",
+            "fuera_programacion": "273 min",
             "atrasado": true
         },
         {
@@ -103,8 +103,16 @@
             "no_parte": "10060186",
             "fuera_programacion": "",
             "atrasado": false
+        },
+        {
+            "programacion": "11:00:00",
+            "maquina": "IMM 63",
+            "molde": "824265",
+            "no_parte": "10148925",
+            "fuera_programacion": "Iniciar montaje",
+            "atrasado": false
         }
     ],
     "tabla_proceso": [],
-    "actualizado": "2026-08-24 11:32:49"
+    "actualizado": "2026-08-24 11:33:54"
 }
