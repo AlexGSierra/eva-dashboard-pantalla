@@ -2,9 +2,9 @@
     "fecha": "24-Aug-2026",
     "fecha_iso": "2026-08-24",
     "turno": "Día",
-    "programados": 3,
+    "programados": 5,
     "realizados": 0,
-    "pendientes": 3,
+    "pendientes": 5,
     "arranques_realizados": 0,
     "arranques_en_proceso": 0,
     "tabla_pendientes": [
@@ -31,8 +31,24 @@
             "no_parte": "10055099",
             "fuera_programacion": "",
             "atrasado": false
+        },
+        {
+            "programacion": "07:00:00",
+            "maquina": "IMM 14",
+            "molde": "452856",
+            "no_parte": "10061101",
+            "fuera_programacion": "260 min",
+            "atrasado": true
+        },
+        {
+            "programacion": "16:00:00",
+            "maquina": "IMM 14",
+            "molde": "451630",
+            "no_parte": "10051632",
+            "fuera_programacion": "",
+            "atrasado": false
         }
     ],
     "tabla_proceso": [],
-    "actualizado": "2026-08-24 11:19:31"
+    "actualizado": "2026-08-24 11:20:37"
 }
