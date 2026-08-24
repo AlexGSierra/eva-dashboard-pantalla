@@ -13,7 +13,7 @@
             "maquina": "IMM 2",
             "molde": "10102739",
             "no_parte": "10102739",
-            "fuera_programacion": "85 min",
+            "fuera_programacion": "87 min",
             "atrasado": true
         },
         {
@@ -29,7 +29,7 @@
             "maquina": "IMM 37",
             "molde": "850912",
             "no_parte": "10055099",
-            "fuera_programacion": "145 min",
+            "fuera_programacion": "147 min",
             "atrasado": true
         },
         {
@@ -37,7 +37,7 @@
             "maquina": "IMM 14",
             "molde": "452856",
             "no_parte": "10061101",
-            "fuera_programacion": "505 min",
+            "fuera_programacion": "507 min",
             "atrasado": true
         },
         {
@@ -53,7 +53,7 @@
             "maquina": "IMM 19",
             "molde": "428604",
             "no_parte": "10028633",
-            "fuera_programacion": "85 min",
+            "fuera_programacion": "87 min",
             "atrasado": true
         },
         {
@@ -61,7 +61,7 @@
             "maquina": "IMM 42",
             "molde": "639231",
             "no_parte": "10060225",
-            "fuera_programacion": "265 min",
+            "fuera_programacion": "267 min",
             "atrasado": true
         },
         {
@@ -77,7 +77,7 @@
             "maquina": "IMM 31",
             "molde": "446482",
             "no_parte": "10058267",
-            "fuera_programacion": "145 min",
+            "fuera_programacion": "147 min",
             "atrasado": true
         },
         {
@@ -93,7 +93,7 @@
             "maquina": "IMM 63",
             "molde": "824265",
             "no_parte": "10148925",
-            "fuera_programacion": "265 min",
+            "fuera_programacion": "267 min",
             "atrasado": true
         },
         {
@@ -109,7 +109,7 @@
             "maquina": "IMM 51",
             "molde": "611917",
             "no_parte": "10056597",
-            "fuera_programacion": "445 min",
+            "fuera_programacion": "447 min",
             "atrasado": true
         },
         {
@@ -171,5 +171,5 @@
             "estatus": "Startup Pending"
         }
     ],
-    "actualizado": "2026-08-24 15:25:57"
+    "actualizado": "2026-08-24 15:27:02"
 }
