@@ -2,9 +2,9 @@
     "fecha": "24-Aug-2026",
     "fecha_iso": "2026-08-24",
     "turno": "Noche",
-    "programados": 22,
+    "programados": 25,
     "realizados": 0,
-    "pendientes": 22,
+    "pendientes": 25,
     "arranques_realizados": 0,
     "arranques_en_proceso": 0,
     "tabla_pendientes": [
@@ -178,6 +178,30 @@
         },
         {
             "programacion": "",
+            "maquina": "IMM 37",
+            "molde": "837384",
+            "no_parte": "10052758",
+            "fuera_programacion": "Sin hora programada",
+            "atrasado": false
+        },
+        {
+            "programacion": "",
+            "maquina": "IMM 38",
+            "molde": "838314",
+            "no_parte": "10038314",
+            "fuera_programacion": "Sin hora programada",
+            "atrasado": false
+        },
+        {
+            "programacion": "",
+            "maquina": "IMM 35",
+            "molde": "451502",
+            "no_parte": "10054136",
+            "fuera_programacion": "Sin hora programada",
+            "atrasado": false
+        },
+        {
+            "programacion": "",
             "maquina": "IMM 71",
             "molde": "",
             "no_parte": "",
@@ -186,5 +210,5 @@
         }
     ],
     "tabla_proceso": [],
-    "actualizado": "2026-08-24 20:53:44"
+    "actualizado": "2026-08-24 20:55:53"
 }
