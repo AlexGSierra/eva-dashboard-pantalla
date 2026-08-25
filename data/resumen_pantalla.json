@@ -2,12 +2,117 @@
     "fecha": "24-Aug-2026",
     "fecha_iso": "2026-08-24",
     "turno": "Noche",
-    "programados": 0,
+    "programados": 13,
     "realizados": 0,
-    "pendientes": 0,
+    "pendientes": 13,
     "arranques_realizados": 0,
     "arranques_en_proceso": 0,
-    "tabla_pendientes": [],
+    "tabla_pendientes": [
+        {
+            "programacion": "",
+            "maquina": "IMM 59",
+            "molde": "451520",
+            "no_parte": "10057852",
+            "fuera_programacion": "Sin hora programada",
+            "atrasado": false
+        },
+        {
+            "programacion": "",
+            "maquina": "IMM 25",
+            "molde": "415138",
+            "no_parte": "10115139",
+            "fuera_programacion": "Sin hora programada",
+            "atrasado": false
+        },
+        {
+            "programacion": "",
+            "maquina": "IMM 61",
+            "molde": "",
+            "no_parte": "",
+            "fuera_programacion": "Sin hora programada",
+            "atrasado": false
+        },
+        {
+            "programacion": "",
+            "maquina": "IMM 62",
+            "molde": "",
+            "no_parte": "",
+            "fuera_programacion": "Sin hora programada",
+            "atrasado": false
+        },
+        {
+            "programacion": "",
+            "maquina": "IMM 63",
+            "molde": "",
+            "no_parte": "",
+            "fuera_programacion": "Sin hora programada",
+            "atrasado": false
+        },
+        {
+            "programacion": "",
+            "maquina": "IMM 64",
+            "molde": "",
+            "no_parte": "",
+            "fuera_programacion": "Sin hora programada",
+            "atrasado": false
+        },
+        {
+            "programacion": "",
+            "maquina": "IMM 65",
+            "molde": "",
+            "no_parte": "",
+            "fuera_programacion": "Sin hora programada",
+            "atrasado": false
+        },
+        {
+            "programacion": "",
+            "maquina": "IMM 66",
+            "molde": "",
+            "no_parte": "",
+            "fuera_programacion": "Sin hora programada",
+            "atrasado": false
+        },
+        {
+            "programacion": "",
+            "maquina": "IMM 67",
+            "molde": "",
+            "no_parte": "",
+            "fuera_programacion": "Sin hora programada",
+            "atrasado": false
+        },
+        {
+            "programacion": "",
+            "maquina": "IMM 68",
+            "molde": "",
+            "no_parte": "",
+            "fuera_programacion": "Sin hora programada",
+            "atrasado": false
+        },
+        {
+            "programacion": "",
+            "maquina": "IMM 69",
+            "molde": "",
+            "no_parte": "",
+            "fuera_programacion": "Sin hora programada",
+            "atrasado": false
+        },
+        {
+            "programacion": "",
+            "maquina": "IMM 70",
+            "molde": "",
+            "no_parte": "",
+            "fuera_programacion": "Sin hora programada",
+            "atrasado": false
+        },
+        {
+            "programacion": "",
+            "maquina": "IMM 71",
+            "molde": "",
+            "no_parte": "",
+            "fuera_programacion": "Sin hora programada",
+            "atrasado": false
+        }
+    ],
     "tabla_proceso": [],
-    "actualizado": "2026-08-24 19:00:48"
+    "actualizado": "2026-08-24 20:44:06"
 }
