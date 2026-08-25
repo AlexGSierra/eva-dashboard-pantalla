@@ -13,7 +13,7 @@
             "maquina": "IMM 51",
             "molde": "611917",
             "no_parte": "10056597",
-            "fuera_programacion": "602 min",
+            "fuera_programacion": "603 min",
             "atrasado": true
         },
         {
@@ -21,7 +21,7 @@
             "maquina": "IMM 42",
             "molde": "639231",
             "no_parte": "10060225",
-            "fuera_programacion": "422 min",
+            "fuera_programacion": "423 min",
             "atrasado": true
         },
         {
@@ -29,7 +29,7 @@
             "maquina": "IMM 63",
             "molde": "824265",
             "no_parte": "10148925",
-            "fuera_programacion": "422 min",
+            "fuera_programacion": "423 min",
             "atrasado": true
         },
         {
@@ -37,7 +37,7 @@
             "maquina": "IMM 37",
             "molde": "850912",
             "no_parte": "10055099",
-            "fuera_programacion": "302 min",
+            "fuera_programacion": "303 min",
             "atrasado": true
         },
         {
@@ -45,7 +45,7 @@
             "maquina": "IMM 31",
             "molde": "446482",
             "no_parte": "10058267",
-            "fuera_programacion": "302 min",
+            "fuera_programacion": "303 min",
             "atrasado": true
         },
         {
@@ -53,7 +53,7 @@
             "maquina": "IMM 2",
             "molde": "10102739",
             "no_parte": "10102739",
-            "fuera_programacion": "242 min",
+            "fuera_programacion": "243 min",
             "atrasado": true
         },
         {
@@ -61,7 +61,7 @@
             "maquina": "IMM 19",
             "molde": "428604",
             "no_parte": "10028633",
-            "fuera_programacion": "242 min",
+            "fuera_programacion": "243 min",
             "atrasado": true
         },
         {
@@ -69,7 +69,7 @@
             "maquina": "IMM 44",
             "molde": "655589",
             "no_parte": "10010331",
-            "fuera_programacion": "182 min",
+            "fuera_programacion": "183 min",
             "atrasado": true
         },
         {
@@ -77,7 +77,7 @@
             "maquina": "IMM 22",
             "molde": "240962",
             "no_parte": "10040962",
-            "fuera_programacion": "182 min",
+            "fuera_programacion": "183 min",
             "atrasado": true
         },
         {
@@ -85,7 +85,7 @@
             "maquina": "IMM 56",
             "molde": "414857",
             "no_parte": "10114859",
-            "fuera_programacion": "182 min",
+            "fuera_programacion": "183 min",
             "atrasado": true
         },
         {
@@ -93,7 +93,7 @@
             "maquina": "IMM 14",
             "molde": "451630",
             "no_parte": "10051632",
-            "fuera_programacion": "122 min",
+            "fuera_programacion": "123 min",
             "atrasado": true
         },
         {
@@ -101,7 +101,7 @@
             "maquina": "IMM 51",
             "molde": "453486",
             "no_parte": "10058497",
-            "fuera_programacion": "122 min",
+            "fuera_programacion": "123 min",
             "atrasado": true
         },
         {
@@ -109,7 +109,7 @@
             "maquina": "IMM 13",
             "molde": "628729",
             "no_parte": "10038237",
-            "fuera_programacion": "62 min",
+            "fuera_programacion": "63 min",
             "atrasado": true
         },
         {
@@ -117,7 +117,7 @@
             "maquina": "IMM 43",
             "molde": "638248",
             "no_parte": "10060186",
-            "fuera_programacion": "62 min",
+            "fuera_programacion": "63 min",
             "atrasado": true
         },
         {
@@ -125,7 +125,7 @@
             "maquina": "IMM 65",
             "molde": "858546",
             "no_parte": "10058546",
-            "fuera_programacion": "62 min",
+            "fuera_programacion": "63 min",
             "atrasado": true
         },
         {
@@ -157,5 +157,5 @@
             "estatus": "Startup Pending"
         }
     ],
-    "actualizado": "2026-08-24 18:02:27"
+    "actualizado": "2026-08-24 18:03:34"
 }
