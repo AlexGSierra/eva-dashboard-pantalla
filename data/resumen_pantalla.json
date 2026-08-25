@@ -66,41 +66,41 @@
         },
         {
             "programacion": "",
-            "maquina": "IMM 66",
-            "molde": "",
-            "no_parte": "",
+            "maquina": "IMM 15",
+            "molde": "426737",
+            "no_parte": "10127116",
             "fuera_programacion": "Sin hora programada",
             "atrasado": false
         },
         {
             "programacion": "",
-            "maquina": "IMM 67",
-            "molde": "",
-            "no_parte": "",
+            "maquina": "IMM 16",
+            "molde": "837395",
+            "no_parte": "10114976",
             "fuera_programacion": "Sin hora programada",
             "atrasado": false
         },
         {
             "programacion": "",
-            "maquina": "IMM 68",
-            "molde": "",
-            "no_parte": "",
+            "maquina": "IMM 26",
+            "molde": "451684",
+            "no_parte": "10159903",
             "fuera_programacion": "Sin hora programada",
             "atrasado": false
         },
         {
             "programacion": "",
-            "maquina": "IMM 69",
-            "molde": "",
-            "no_parte": "",
+            "maquina": "IMM 27",
+            "molde": "249782",
+            "no_parte": "10159251",
             "fuera_programacion": "Sin hora programada",
             "atrasado": false
         },
         {
             "programacion": "",
-            "maquina": "IMM 70",
-            "molde": "",
-            "no_parte": "",
+            "maquina": "IMM 28",
+            "molde": "240957",
+            "no_parte": "10044802",
             "fuera_programacion": "Sin hora programada",
             "atrasado": false
         },
@@ -114,5 +114,5 @@
         }
     ],
     "tabla_proceso": [],
-    "actualizado": "2026-08-24 20:46:15"
+    "actualizado": "2026-08-24 20:49:27"
 }
