@@ -9,14 +9,14 @@
     "arranques_en_proceso": 0,
     "tabla_pendientes": [
         {
-            "programacion": "",
-            "maquina": "",
-            "molde": "",
-            "no_parte": "",
-            "fuera_programacion": "Sin hora programada",
-            "atrasado": false
+            "programacion": "07:00:00",
+            "maquina": "IMM 2",
+            "molde": "402739",
+            "no_parte": "10102739",
+            "fuera_programacion": "209 min",
+            "atrasado": true
         }
     ],
     "tabla_proceso": [],
-    "actualizado": "2026-08-25 10:26:36"
+    "actualizado": "2026-08-25 10:29:51"
 }
