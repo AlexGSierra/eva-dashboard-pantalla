@@ -1,13 +1,22 @@
 {
-    "fecha": "27-Aug-2026",
-    "fecha_iso": "2026-08-27",
-    "turno": "Noche",
-    "programados": 0,
+    "fecha": "28-Aug-2026",
+    "fecha_iso": "2026-08-28",
+    "turno": "Día",
+    "programados": 1,
     "realizados": 0,
-    "pendientes": 0,
+    "pendientes": 1,
     "arranques_realizados": 0,
     "arranques_en_proceso": 0,
-    "tabla_pendientes": [],
+    "tabla_pendientes": [
+        {
+            "programacion": "07:00:00",
+            "maquina": "IMM 38",
+            "molde": "631551",
+            "no_parte": "10039469",
+            "fuera_programacion": "Start Setup",
+            "atrasado": false
+        }
+    ],
     "tabla_proceso": [],
-    "actualizado": "2026-08-27 19:00:14"
+    "actualizado": "2026-08-28 07:00:34"
 }
