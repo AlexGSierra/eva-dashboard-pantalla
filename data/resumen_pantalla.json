@@ -1,13 +1,22 @@
 {
-    "fecha": "28-Aug-2026",
-    "fecha_iso": "2026-08-28",
-    "turno": "Noche",
-    "programados": 0,
+    "fecha": "29-Aug-2026",
+    "fecha_iso": "2026-08-29",
+    "turno": "Día",
+    "programados": 1,
     "realizados": 0,
-    "pendientes": 0,
+    "pendientes": 1,
     "arranques_realizados": 0,
     "arranques_en_proceso": 0,
-    "tabla_pendientes": [],
+    "tabla_pendientes": [
+        {
+            "programacion": "17:00:00",
+            "maquina": "IMM 35",
+            "molde": "427470",
+            "no_parte": "10127481",
+            "fuera_programacion": "",
+            "atrasado": false
+        }
+    ],
     "tabla_proceso": [],
-    "actualizado": "2026-08-28 19:00:30"
+    "actualizado": "2026-08-29 15:47:05"
 }
