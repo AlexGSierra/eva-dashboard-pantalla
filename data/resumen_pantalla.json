@@ -1,13 +1,22 @@
 {
-    "fecha": "29-Aug-2026",
-    "fecha_iso": "2026-08-29",
-    "turno": "Noche",
-    "programados": 0,
+    "fecha": "30-Aug-2026",
+    "fecha_iso": "2026-08-30",
+    "turno": "Día",
+    "programados": 1,
     "realizados": 0,
-    "pendientes": 0,
+    "pendientes": 1,
     "arranques_realizados": 0,
     "arranques_en_proceso": 0,
-    "tabla_pendientes": [],
+    "tabla_pendientes": [
+        {
+            "programacion": "07:00:00",
+            "maquina": "IMM 57",
+            "molde": "951715",
+            "no_parte": "10051715",
+            "fuera_programacion": "Start Setup",
+            "atrasado": false
+        }
+    ],
     "tabla_proceso": [],
-    "actualizado": "2026-08-29 20:11:50"
+    "actualizado": "2026-08-30 07:00:02"
 }
