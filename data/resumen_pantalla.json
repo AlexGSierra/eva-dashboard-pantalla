@@ -1,22 +1,13 @@
 {
-    "fecha": "01-Sep-2026",
-    "fecha_iso": "2026-09-01",
-    "turno": "Noche",
-    "programados": 1,
+    "fecha": "02-Sep-2026",
+    "fecha_iso": "2026-09-02",
+    "turno": "Día",
+    "programados": 0,
     "realizados": 0,
-    "pendientes": 1,
+    "pendientes": 0,
     "arranques_realizados": 0,
     "arranques_en_proceso": 0,
-    "tabla_pendientes": [
-        {
-            "programacion": "",
-            "maquina": "",
-            "molde": "",
-            "no_parte": "",
-            "fuera_programacion": "Sin hora programada",
-            "atrasado": false
-        }
-    ],
+    "tabla_pendientes": [],
     "tabla_proceso": [],
-    "actualizado": "2026-09-01 19:00:25"
+    "actualizado": "2026-09-02 07:01:36"
 }
