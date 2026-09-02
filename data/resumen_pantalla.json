@@ -13,7 +13,7 @@
             "maquina": "IMM 1",
             "molde": "452873-2",
             "no_parte": "10061082",
-            "fuera_programacion": "709 min",
+            "fuera_programacion": "710 min",
             "atrasado": true
         },
         {
@@ -21,7 +21,7 @@
             "maquina": "IMM 19",
             "molde": "451589",
             "no_parte": "10051590",
-            "fuera_programacion": "709 min",
+            "fuera_programacion": "710 min",
             "atrasado": true
         },
         {
@@ -29,7 +29,7 @@
             "maquina": "IMM 41",
             "molde": "451519",
             "no_parte": "10051519",
-            "fuera_programacion": "709 min",
+            "fuera_programacion": "710 min",
             "atrasado": true
         },
         {
@@ -37,7 +37,7 @@
             "maquina": "IMM 55",
             "molde": "837372",
             "no_parte": "10038791",
-            "fuera_programacion": "709 min",
+            "fuera_programacion": "710 min",
             "atrasado": true
         },
         {
@@ -45,7 +45,7 @@
             "maquina": "IMM 13",
             "molde": "639218-2",
             "no_parte": "10062525",
-            "fuera_programacion": "709 min",
+            "fuera_programacion": "710 min",
             "atrasado": true
         },
         {
@@ -53,7 +53,7 @@
             "maquina": "IMM 51",
             "molde": "650580",
             "no_parte": "10153354",
-            "fuera_programacion": "709 min",
+            "fuera_programacion": "710 min",
             "atrasado": true
         },
         {
@@ -61,7 +61,7 @@
             "maquina": "IMM 25",
             "molde": "415138",
             "no_parte": "10115139",
-            "fuera_programacion": "649 min",
+            "fuera_programacion": "650 min",
             "atrasado": true
         },
         {
@@ -69,7 +69,7 @@
             "maquina": "IMM 45",
             "molde": "427388",
             "no_parte": "10127388",
-            "fuera_programacion": "649 min",
+            "fuera_programacion": "650 min",
             "atrasado": true
         },
         {
@@ -77,7 +77,7 @@
             "maquina": "IMM 42",
             "molde": "610135",
             "no_parte": "10019507",
-            "fuera_programacion": "649 min",
+            "fuera_programacion": "650 min",
             "atrasado": true
         },
         {
@@ -85,7 +85,7 @@
             "maquina": "IMM 32",
             "molde": "451504",
             "no_parte": "10054137",
-            "fuera_programacion": "649 min",
+            "fuera_programacion": "650 min",
             "atrasado": true
         },
         {
@@ -93,7 +93,7 @@
             "maquina": "IMM 48",
             "molde": "453489",
             "no_parte": "10058494",
-            "fuera_programacion": "589 min",
+            "fuera_programacion": "590 min",
             "atrasado": true
         },
         {
@@ -101,7 +101,7 @@
             "maquina": "IMM 33",
             "molde": "243724",
             "no_parte": "10143724",
-            "fuera_programacion": "529 min",
+            "fuera_programacion": "530 min",
             "atrasado": true
         },
         {
@@ -109,7 +109,7 @@
             "maquina": "IMM 43",
             "molde": "638248",
             "no_parte": "10060185",
-            "fuera_programacion": "529 min",
+            "fuera_programacion": "530 min",
             "atrasado": true
         },
         {
@@ -117,7 +117,7 @@
             "maquina": "IMM 53",
             "molde": "225056",
             "no_parte": "10028323",
-            "fuera_programacion": "469 min",
+            "fuera_programacion": "470 min",
             "atrasado": true
         },
         {
@@ -125,7 +125,7 @@
             "maquina": "IMM 39",
             "molde": "655908",
             "no_parte": "10022881",
-            "fuera_programacion": "469 min",
+            "fuera_programacion": "470 min",
             "atrasado": true
         },
         {
@@ -133,7 +133,7 @@
             "maquina": "IMM 50",
             "molde": "837365",
             "no_parte": "10055597",
-            "fuera_programacion": "469 min",
+            "fuera_programacion": "470 min",
             "atrasado": true
         },
         {
@@ -141,7 +141,7 @@
             "maquina": "IMM 46",
             "molde": "837366",
             "no_parte": "10114964",
-            "fuera_programacion": "409 min",
+            "fuera_programacion": "410 min",
             "atrasado": true
         },
         {
@@ -149,7 +149,7 @@
             "maquina": "IMM 56",
             "molde": "414857",
             "no_parte": "10114859",
-            "fuera_programacion": "409 min",
+            "fuera_programacion": "410 min",
             "atrasado": true
         },
         {
@@ -157,7 +157,7 @@
             "maquina": "IMM 27",
             "molde": "451631",
             "no_parte": "10051631",
-            "fuera_programacion": "349 min",
+            "fuera_programacion": "350 min",
             "atrasado": true
         },
         {
@@ -165,7 +165,7 @@
             "maquina": "IMM 61",
             "molde": "631544",
             "no_parte": "10039265",
-            "fuera_programacion": "349 min",
+            "fuera_programacion": "350 min",
             "atrasado": true
         },
         {
@@ -173,7 +173,7 @@
             "maquina": "IMM 33",
             "molde": "454181",
             "no_parte": "10157472",
-            "fuera_programacion": "349 min",
+            "fuera_programacion": "350 min",
             "atrasado": true
         },
         {
@@ -181,7 +181,7 @@
             "maquina": "IMM 36",
             "molde": "222913",
             "no_parte": "10022913",
-            "fuera_programacion": "349 min",
+            "fuera_programacion": "350 min",
             "atrasado": true
         },
         {
@@ -189,7 +189,7 @@
             "maquina": "IMM 2",
             "molde": "402739",
             "no_parte": "10102741",
-            "fuera_programacion": "289 min",
+            "fuera_programacion": "290 min",
             "atrasado": true
         },
         {
@@ -197,7 +197,7 @@
             "maquina": "IMM 42",
             "molde": "837393",
             "no_parte": "10052606",
-            "fuera_programacion": "289 min",
+            "fuera_programacion": "290 min",
             "atrasado": true
         },
         {
@@ -205,7 +205,7 @@
             "maquina": "IMM 30",
             "molde": "460296",
             "no_parte": "10060302",
-            "fuera_programacion": "229 min",
+            "fuera_programacion": "230 min",
             "atrasado": true
         },
         {
@@ -213,7 +213,7 @@
             "maquina": "IMM 37",
             "molde": "451528-2",
             "no_parte": "10054160",
-            "fuera_programacion": "229 min",
+            "fuera_programacion": "230 min",
             "atrasado": true
         },
         {
@@ -221,7 +221,7 @@
             "maquina": "IMM 14",
             "molde": "452856",
             "no_parte": "10061087",
-            "fuera_programacion": "169 min",
+            "fuera_programacion": "170 min",
             "atrasado": true
         },
         {
@@ -229,7 +229,7 @@
             "maquina": "IMM 31",
             "molde": "837379",
             "no_parte": "10152436",
-            "fuera_programacion": "169 min",
+            "fuera_programacion": "170 min",
             "atrasado": true
         },
         {
@@ -237,7 +237,7 @@
             "maquina": "IMM 10",
             "molde": "453493",
             "no_parte": "10058448",
-            "fuera_programacion": "109 min",
+            "fuera_programacion": "110 min",
             "atrasado": true
         },
         {
@@ -245,7 +245,7 @@
             "maquina": "IMM 62",
             "molde": "453479",
             "no_parte": "10053479",
-            "fuera_programacion": "49 min",
+            "fuera_programacion": "50 min",
             "atrasado": true
         }
     ],
@@ -257,5 +257,5 @@
             "estatus": "Startup Pending"
         }
     ],
-    "actualizado": "2026-09-01 18:49:09"
+    "actualizado": "2026-09-01 18:50:17"
 }
