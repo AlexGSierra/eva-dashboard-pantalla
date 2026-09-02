@@ -2,12 +2,21 @@
     "fecha": "02-Sep-2026",
     "fecha_iso": "2026-09-02",
     "turno": "Día",
-    "programados": 0,
+    "programados": 1,
     "realizados": 0,
-    "pendientes": 0,
+    "pendientes": 1,
     "arranques_realizados": 0,
     "arranques_en_proceso": 0,
-    "tabla_pendientes": [],
+    "tabla_pendientes": [
+        {
+            "programacion": "",
+            "maquina": "",
+            "molde": "",
+            "no_parte": "",
+            "fuera_programacion": "Sin hora programada",
+            "atrasado": false
+        }
+    ],
     "tabla_proceso": [],
-    "actualizado": "2026-09-02 07:01:36"
+    "actualizado": "2026-09-02 11:19:51"
 }
