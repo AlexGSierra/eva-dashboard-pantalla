@@ -1,7 +1,7 @@
 {
-    "fecha": "10-Sep-2026",
-    "fecha_iso": "2026-09-10",
-    "turno": "Noche",
+    "fecha": "11-Sep-2026",
+    "fecha_iso": "2026-09-11",
+    "turno": "Día",
     "programados": 0,
     "realizados": 0,
     "pendientes": 0,
@@ -9,5 +9,5 @@
     "arranques_en_proceso": 0,
     "tabla_pendientes": [],
     "tabla_proceso": [],
-    "actualizado": "2026-09-10 19:00:24"
+    "actualizado": "2026-09-11 07:00:40"
 }
