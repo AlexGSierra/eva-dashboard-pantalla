@@ -13,7 +13,7 @@
             "maquina": "IMM 1",
             "molde": "452873-2",
             "no_parte": "10061082",
-            "fuera_programacion": "149 min",
+            "fuera_programacion": "150 min",
             "atrasado": true
         },
         {
@@ -21,7 +21,7 @@
             "maquina": "IMM 44",
             "molde": "202501",
             "no_parte": "10124419",
-            "fuera_programacion": "89 min",
+            "fuera_programacion": "90 min",
             "atrasado": true
         },
         {
@@ -29,7 +29,7 @@
             "maquina": "IMM 19",
             "molde": "428604",
             "no_parte": "10028633",
-            "fuera_programacion": "89 min",
+            "fuera_programacion": "90 min",
             "atrasado": true
         },
         {
@@ -138,5 +138,5 @@
         }
     ],
     "tabla_proceso": [],
-    "actualizado": "2026-10-14 09:29:38"
+    "actualizado": "2026-10-14 09:30:46"
 }
